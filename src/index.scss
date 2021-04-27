@@ -1,0 +1,54 @@
+$small: 500px;
+$ratio: 0.8;
+
+@mixin fontSize($size) {
+  font-size: $size;
+
+  @media screen and (max-width: $small) {
+    font-size: $size * $ratio;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+  @include fontSize(1rem);
+}
+
+.notice {
+  text-align: center;
+  @include fontSize(3rem);
+}
+
+.nat {
+  font-weight: bold;
+}
+
+footer {
+  font-family: sans-serif;
+  position: absolute;
+  margin: 1rem 1.4rem;
+  right: 0;
+  bottom: 0;
+  @include fontSize(0.85rem);
+}
+
+a {
+  color: crimson;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
