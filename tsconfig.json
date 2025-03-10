@@ -1,11 +1,18 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "strict": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types", "types"]
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "jsx": "preserve"
   },
-  "include": ["src", "types"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

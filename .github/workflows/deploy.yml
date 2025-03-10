@@ -2,29 +2,34 @@ name: Deploy
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*"
 
 jobs:
-  gh-release:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - name: Build App
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+      - name: Build
         run: |
-          if [ -e yarn.lock ]; then
-          yarn install --ignore-optional --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci --no-optional
-          else
-          npm i --no-optional
-          fi
-          yarn build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+          bun install
+          bun run build
+
+      - name: Upload static files as artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: build
+          path: dist/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
