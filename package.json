@@ -1,6 +1,6 @@
 {
   "name": "symmetric-nat-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "NAT Test: Am I behind a Symmetric NAT or Normal NAT (Full-cone NAT or other non-symmetric)",
   "repository": {
