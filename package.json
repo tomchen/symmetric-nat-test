@@ -1,13 +1,7 @@
 {
   "name": "symmetric-nat-test",
   "version": "1.0.3",
-  "type": "module",
   "description": "NAT Test: Am I behind a Symmetric NAT or Normal NAT (Full-cone NAT or other non-symmetric)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tomchen/symmetric-nat-test"
-  },
-  "homepage": "https://tomchen.github.io/symmetric-nat-test",
   "keywords": [
     "test",
     "nat",
@@ -17,11 +11,17 @@
     "stun",
     "turn"
   ],
-  "author": "Tom Chen <tomchen.org>",
+  "homepage": "https://tomchen.github.io/symmetric-nat-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomchen/symmetric-nat-test"
+  },
   "license": "MIT",
+  "author": "Tom Chen <tomchen.org>",
+  "type": "module",
   "scripts": {
-    "dev": "vite dev",
     "build": "vite build",
+    "dev": "vite dev",
     "preview": "vite preview",
     "version": "bun scripts/bump.ts"
   },
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/node": "^22.13.10",
     "sass": "^1.85.1",
-    "semver-ts": "^1.0.1",
+    "semver-ts": "^1.0.2",
     "typescript": "^5.8.2",
     "vite": "^6.2.1"
   }

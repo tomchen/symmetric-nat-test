@@ -6,7 +6,7 @@
       "devDependencies": {
         "@types/node": "^22.13.10",
         "sass": "^1.85.1",
-        "semver-ts": "^1.0.1",
+        "semver-ts": "^1.0.2",
         "typescript": "^5.8.2",
         "vite": "^6.2.1",
       },
@@ -223,7 +223,7 @@
 
     "sass-embedded-win32-x64": ["sass-embedded-win32-x64@1.85.1", "", { "os": "win32", "cpu": "x64" }, "sha512-/FO0AGKWxVfCk4GKsC0yXWBpUZdySe3YAAbQQL0lL6xUd1OiUY8Kow6g4Kc1TB/+z0iuQKKTqI/acJMEYl4iTQ=="],
 
-    "semver-ts": ["semver-ts@1.0.1", "", {}, "sha512-eL7SjHiwktjV+vTFf3pjynuvPILynk/wfKP44JL7fx46Ty1UEMstEnL8SP53nBcIzTFK3QLNhRQUx9d+uq6zhw=="],
+    "semver-ts": ["semver-ts@1.0.2", "", {}, "sha512-eVAnfoN/2ipAyt1jQqbrvZ+ksaqdz3kA4J8iuwiiL0idUcLy63PZ2tHB3Y3Hpk5kHoyhJI6XwhvAIcqdLxyyQQ=="],
 
     "source-map-js": ["source-map-js@1.2.1", "", {}, "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="],
 
